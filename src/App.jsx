@@ -1,34 +1,39 @@
-import { Typography, Divider } from 'antd';
-import './App.css';
-import TodoList from './components/TodoList';
-import Filters from './components/Filters';
+import { Typography, Divider } from "antd";
+import "./App.css";
+import TodoList from "./components/TodoList";
+import Filters from "./components/Filters";
+import { setupServer } from "./fakeApis";
+
+// if (process.env.NODE_ENV === "development") {
+  setupServer();
+// }
 
 const { Title } = Typography;
 
 function App() {
 
   return (
-    <div className='container'>
+    <div className="container">
       <div
         style={{
           width: 500,
-          margin: '0 auto',
-          display: 'flex',
-          flexDirection: 'column',
-          backgroundColor: 'white',
+          margin: "0 auto",
+          display: "flex",
+          flexDirection: "column",
+          backgroundColor: "white",
           padding: 20,
-          boxShadow: '0 0 10px 4px #bfbfbf',
+          boxShadow: "0 0 10px 4px #bfbfbf",
           borderRadius: 5,
-          minHeight: '90vh',
+          minHeight: "90vh",
         }}
       >
-        <Title style={{ textAlign: 'center' }}>TODO APP with REDUX</Title>
+        <Title style={{ textAlign: "center" }}>TODO APP with REDUX</Title>
         <Filters />
         <Divider />
         <TodoList />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

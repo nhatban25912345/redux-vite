@@ -1,7 +1,7 @@
 // import { createSelector } from "reselect"   // Redux-core
 import { createSelector } from "@reduxjs/toolkit"   // Redux-toolkit
 
-export const todoListSelector = (state) => state.todoList
+export const todoListSelector = (state) => state.todoList.todoList
 export const searchTextFilterSelector = (state) => state.filters.search
 export const statusFilterSelector = (state) => state.filters.status
 export const priorityFilterSelector = (state) => state.filters.priority

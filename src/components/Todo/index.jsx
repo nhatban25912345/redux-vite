@@ -3,7 +3,7 @@ import { Row, Tag, Checkbox } from 'antd';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types'; // Import PropTypes
 
-import { todoListSlice } from '../TodoList/todoSlice';
+import todoListSlice from '../TodoList/todoSlice';
 
 const priorityColorMapping = {
   High: 'red',
