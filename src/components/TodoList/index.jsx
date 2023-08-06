@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { Col, Row, Input, Button, Select, Tag } from 'antd';
 import Todo from '../Todo';
 import { useDispatch, useSelector } from 'react-redux';
-import { addTodo } from '../redux/actions';
 import { v4 as uuidv4 } from 'uuid';
 import { todosRemainingSelector } from '../redux/selectors';
+import { todoListSlice } from './todoSlice';
 
 export default function TodoList() {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ export default function TodoList() {
   const todoList = useSelector(todosRemainingSelector);
 
   const handleAddButtonClick = () => {
-    dispatch(addTodo({
+    dispatch(todoListSlice.actions.addTodo({
       id: uuidv4(),
       name: todoName,
       completed: false,

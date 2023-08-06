@@ -4,3 +4,11 @@
 .ant-select-multiple .ant-select-selection-item {
   height: 27px;
 }
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
